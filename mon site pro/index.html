@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Dev - Développeur Web & Mobile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-orange-500">Moses Dev</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">Accueil</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">À propos</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">Services</a>
+                        <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">Témoignages</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">Projets</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-orange-500 px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-orange-500 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-orange-500">Services</a>
+                <a href="#testimonials" class="block px-3 py-2 text-gray-700 hover:text-orange-500">Témoignages</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-orange-500">Projets</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-orange-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-orange-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-800 mb-6">
+                        Moses Dev — <span class="text-orange-500">Développeur Web & Mobile</span>, créateur de solutions numériques efficaces.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Je transforme vos idées en réalité numérique avec des solutions sur mesure, performantes et adaptées à vos besoins.
+                    </p>
+                    <a href="https://wa.me/+243 975081039" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition duration-300 shadow-lg">
+                        <i class="fab fa-whatsapp mr-2"></i> Discuter sur WhatsApp
+                    </a>
+                </div>
+                <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl">
+                        <img src="WhatsApp Image 2025-07-25 à 23.40.08_79c569d8.jpg" alt="Moses Dev" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">À propos de moi</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-1/3 flex justify-center mb-8 lg:mb-0">
+                    <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500 shadow-lg">
+                        <img src="WhatsApp Image 2025-07-25 à 23.40.09_b9d2b0c0.jpg" alt="Moses Dev" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/3">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Je suis Moses, développeur passionné avec expertise en Web & Mobile.</h3>
+                    <p class="text-gray-600 mb-6">
+                        Je conçois des sites modernes, intuitifs et performants qui répondent aux besoins spécifiques de mes clients. Avec une approche centrée sur l'utilisateur, je m'efforce de créer des expériences numériques qui non seulement impressionnent visuellement, mais qui sont également fonctionnelles et efficaces.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">HTML</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">CSS</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">JavaScript</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">PHP</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">Laravel</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">Flutter</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">MySQL</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">Firebase</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">Git</div>
+                        <div class="skill-badge bg-orange-50 text-orange-600 px-4 py-2 rounded-full text-center font-medium">Figma</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Mes Services</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sites Web</h3>
+                    <p class="text-gray-600">
+                        Création de sites vitrines et dynamiques sur mesure, adaptés à votre image et à vos objectifs.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Applications Mobile</h3>
+                    <p class="text-gray-600">
+                        Développement d'applications Android/iOS performantes et intuitives avec Flutter.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">API & Systèmes</h3>
+                    <p class="text-gray-600">
+                        Conception d'API robustes et systèmes de gestion pour automatiser vos processus.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Optimisation</h3>
+                    <p class="text-gray-600">
+                        Amélioration des performances et maintenance de vos solutions existantes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Témoignages</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jean K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Jean K.</h4>
+                            <div class="flex text-orange-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Moses a donné vie à mon projet mobile en un temps record. Son professionnalisme et sa réactivité ont dépassé toutes mes attentes."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Claire D." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Claire D.</h4>
+                            <div class="flex text-orange-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Service rapide, code propre, excellent contact. Moses a su comprendre mes besoins et les traduire parfaitement dans mon site e-commerce."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Thomas L." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Thomas L.</h4>
+                            <div class="flex text-orange-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Un développeur compétent et à l'écoute. L'application qu'il a créée pour mon entreprise a considérablement amélioré notre productivité."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Projets Réalisés</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Projet 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Application de Gestion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Application mobile de gestion d'inventaire pour une entreprise de distribution.
+                        </p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-600 inline-flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Projet 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Site E-commerce</h3>
+                        <p class="text-gray-600 mb-4">
+                            Plateforme de vente en ligne avec système de paiement intégré et gestion de stocks.
+                        </p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-600 inline-flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Screenshot_20250419-174610.jpg" alt="Projet 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Portfolio Artistique</h3>
+                        <p class="text-gray-600 mb-4">
+                            Site vitrine moderne pour un photographe professionnel avec galerie interactive.
+                        </p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-600 inline-flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-orange-500 text-base font-medium rounded-md text-orange-500 bg-white hover:bg-orange-50 transition duration-300">
+                    Voir tous mes projets <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contactez-moi</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="lg:flex lg:space-x-12">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500" placeholder="Votre nom">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500" placeholder="Votre email">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500" placeholder="Votre message"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition duration-300 shadow-md">
+                                Envoyer le message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-orange-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Autres moyens de contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-orange-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:mosesdev@email.com" class="text-gray-600 hover:text-orange-500">moise.bita10@email.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-orange-500 text-xl mt-1 mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                                    <a href="https://wa.me/yourphonenumber" target="_blank" class="text-gray-600 hover:text-orange-500">Envoyez-moi un message direct +243 975081039</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-orange-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Localisation</h4>
+                                    <p class="text-gray-600">Disponible pour des projets en remote ou en présentiel</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <h4 class="font-medium text-gray-800 mb-3">Réseaux sociaux</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 shadow">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 shadow">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 shadow">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start mb-4 md:mb-0">
+                    <span class="text-xl font-bold text-orange-500">Moses Dev</span>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2023 Moses Dev. Tous droits réservés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to a server
+                alert('Merci pour votre message! Je vous répondrai dès que possible.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
